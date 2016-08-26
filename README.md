@@ -12,12 +12,10 @@ You can call Gopher from chat!
 
 ## Setup
 
-* Build gopher binary
+#### 1. Build gopher binary
+* [mattn/gopher](https://github.com/mattn/gopher)
 
-[mattn/gopher](https://github.com/mattn/gopher)
-
-* Write config.json
-
+#### 2. Write config.json
 ```
 {
   // Your Mattermost settings
@@ -41,19 +39,28 @@ You can call Gopher from chat!
   // path to gopher.exe (Even if you use windows, this value is like `$GOPATH` not `%GOPATH%`)
   // details -> https://github.com/golang/go/issues/8469
   "gopher": "$GOPATH/bin/gopher.exe",
+
   // The maximum number of gophers on display
   // If you set a large number, gopher will eat all of your machine resource)
   "max_of_gophers": 10                 
 }
 ```
 
-* Run bopher
+#### 3. Run bopher
 
 ```
 go run main.go
 ```
 
-* Call gopher on mattermost
-
+#### 4. Call gopher on mattermost
 ![](https://raw.githubusercontent.com/kaakaa/bopher/master/bopher.gif)
 
+## Commands
+
+Message         | Action
+----------------|----------------
+`gopher`        | Call a gopher
+`bye gopher`    | kill all gophers :scream:
+`jump gopher`   | jump all existing gophers
+`hello gopher`  | a gopher say hello 
+`whats gopher?` | r u sure?

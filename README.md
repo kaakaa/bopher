@@ -64,3 +64,7 @@ Message         | Action
 `jump gopher`   | jump all existing gophers
 `hello gopher`  | a gopher say hello 
 `whats gopher?` | r u sure?
+
+## License
+
+This code is provided under the MIT license.

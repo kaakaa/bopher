@@ -1,4 +1,4 @@
-package main
+package bopher
 
 import (
 	"encoding/json"
@@ -6,25 +6,23 @@ import (
 	"io/ioutil"
 	"runtime"
 
-	"./bopher"
-
 	"github.com/cratonica/trayhost"
 )
 
 const ConfigFileName = "config.json"
 
-func main() {
+func Run() {
 	file, err := ioutil.ReadFile(ConfigFileName)
 	if err != nil {
 		panic(err)
 	}
-	var config bopher.Config
+	var config Config
 	json.Unmarshal(file, &config)
 
 	runtime.LockOSThread()
 
 	go func() {
-		go bopher.RunBot(config)
+		go RunBot(config)
 		trayhost.SetUrl(config.Mattermost.HttpURL())
 	}()
 

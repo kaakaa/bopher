@@ -1,0 +1,21 @@
+{
+    "mattermost": {
+        "host": "localhost",
+        "port": "8065",
+        "bot": {
+            "email": "admin@example.com",
+            "password": "admin",
+            "name": "Bot",
+            "first_name": "Go",
+            "last_name": "Bot"
+        },
+        "team": "bot_team",
+        "channel": {
+            "name":"sample",
+            "display_name": "BotRoom",
+            "purpose": "Here is for bot test"
+        }
+    },
+    "gopher": "$GOPATH/bin/gopher.exe",
+    "max_of_gophers": 10
+}

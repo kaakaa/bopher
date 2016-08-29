@@ -12,10 +12,15 @@ You can call Gopher from chat!
 
 ## Setup
 
-#### 1. Build gopher binary
+#### 1. Download bopher.exe
+* [Releases · kaakaa/bopher](https://github.com/kaakaa/bopher/releases)
+
+#### 2. Build gopher binary
 * [mattn/gopher](https://github.com/mattn/gopher)
 
-#### 2. Write config.json
+#### 3. Write config.json
+* place [bopher/config\.json](https://github.com/kaakaa/bopher/blob/master/config.json) in the same direcoty with bopher.exe
+
 ```
 {
   // Your Mattermost settings
@@ -46,13 +51,13 @@ You can call Gopher from chat!
 }
 ```
 
-#### 3. Run bopher
+#### 4. Run bopher
 
 ```
-go run main.go
+bopher.exe
 ```
 
-#### 4. Call gopher on mattermost
+#### 5. Call gopher on mattermost
 ![](https://raw.githubusercontent.com/kaakaa/bopher/master/bopher.gif)
 
 ## Commands
@@ -64,6 +69,22 @@ Message         | Action
 `jump gopher`   | jump all existing gophers
 `hello gopher`  | a gopher say hello 
 `whats gopher?` | r u sure?
+
+## Build
+
+
+#### 1. Clone this repository
+
+```
+go get github.com/kaakaa/bopher
+cd $GOPATH/src/github.com/kaakaa/bopher
+```
+
+#### 2. Make build
+
+```
+make build
+```
 
 ## License
 

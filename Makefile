@@ -6,7 +6,7 @@ DEPEND=github.com/Masterminds/glide
 clean-build: clean depend build
 
 build: depend
-	go build github.com/kaakaa/bopher/bopher
+	go build -ldflags github.com/kaakaa/bopher/bopher
 
 depend:
 	go get -v $(DEPEND)

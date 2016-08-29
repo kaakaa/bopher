@@ -1,0 +1,14 @@
+language: go
+go:
+- 1.7
+- tip
+script: make clean-build
+deploy:
+  provider: releases
+  api_key:
+    secure: PZbcNFXClJi/6UKDQ9DabQVsy76CPxnQLsgj93TQMkyF5P5QPp5uLEOS0zjWFxnxceRIqrC/l6aPLqFVG9VVMWiYw+NWUl6l4M7CIfBGmd2+OAIATyOlqCSGv14FILgLAX8ptXBTOIlgTT2wwZgho4AJtB2XJfi5IBbsgtx4hnF1Q9dSRzFzPev5Gf6iVNuaJQ9iCXh3CX6nexHti/fHkGxI6UmJ8y3CkHH6sXmkaV0SJljmWOtvBvSQV0jMp4y9LYWRWUgFOAaLJjxJF4XDdbCaWcp5IEVZ/r4gv2y42+qA6wtE54y6RbuQTcgV/ikbnaHhaucF2H5xCdPREQzxTcCRSryyqt7NCcnuw2XrQQRBFeOS5JIxRK7AvHRenZRlGuAMLfyy7NJXNasPaSanEgOQWFaD+F69d+mna7flu21+Db20G+UttyBWZGa1uqkfApLl3hdWFTJVzclUcNbbTx+hBX71WJcCFu5wxBtU0W9NV8WTN0k78MkGwSqxuPJSV+8uoUCvNaoX0TUgwSTJqWbSTUozRDDV1YvkI30pdPHq2oXzszWzA1l2tossO33d+1LJG92de8dHIYgUAKi5o/6szaalYqbRwHGwWJEeWHZXHTH4yXPfsKPEuLWXQx/K+OviBwMOAlE8VOAqgiKPaJx1YG9e8HBVp33nqJk4f78=
+  file: bopher.exe
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: kaakaa/bopher

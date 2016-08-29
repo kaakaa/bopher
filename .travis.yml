@@ -1,7 +1,15 @@
 language: go
+sudo: false
+
 go:
 - tip
+
+addons:
+  apt:
+    packages:
+      - libgtk-3-dev
 script: make clean-build
+
 deploy:
   provider: releases
   api_key:
